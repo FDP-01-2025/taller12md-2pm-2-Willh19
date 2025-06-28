@@ -57,9 +57,9 @@ void modificarEstudiante() {
     std::cin >> id;
     if (archivo.is_open() && archivo_modificado.is_open())
     {
-        while (archivo >> e.nombre >> e.carnet >> e.edad)
+        while (archivo >> e.nombre >> e.carnet >> e.edad) 
         {
-            if (e.carnet == id)
+            if (e.carnet == id) //Hasta que en archivo, se encuentre
             {
                 archivo >> e.edad;
                 archivo >> e.carnet;
@@ -68,8 +68,7 @@ void modificarEstudiante() {
                 std::cout << "El estudiante encontrado fue \n";
                 std::cout << "Edad: " << e.edad<<std::endl;
                 std::cout << "Nombre: " << e.nombre<<std::endl;
-                std::cout << "Carnet: " << e.carnet <<std::endl;
-                std::cout << "Que quieres modificar?\n";
+                std::cout << "Carnet: " << e.carnet <<std::endl; // Se enseñan las variables del estudiante
                 std::cout << "Modifica al estudiante: \n";
                 std::cout << "Nombre: \n";
                 std::cin >> e.nombre;
